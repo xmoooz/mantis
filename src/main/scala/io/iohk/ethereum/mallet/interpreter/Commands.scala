@@ -8,7 +8,7 @@ import io.iohk.ethereum.mallet.common.{StringUtil, Util}
 import io.iohk.ethereum.mallet.interpreter.Parameter._
 import io.iohk.ethereum.jsonrpc.client.CommonJsonCodecs._
 import io.iohk.ethereum.mallet.service.State
-import io.iohk.ethereum.network.p2p.messages.CommonMessages.SignedTransactions.SignedTransactionEnc
+import io.iohk.ethereum.network.p2p.messages.PV60.SignedTransactions.SignedTransactionEnc
 import io.iohk.ethereum.rlp
 import io.iohk.ethereum.rlp.RLPList
 import io.iohk.ethereum.rlp.RLPImplicits._

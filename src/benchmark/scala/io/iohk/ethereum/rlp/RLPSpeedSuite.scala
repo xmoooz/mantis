@@ -4,7 +4,7 @@ import akka.util.ByteString
 import io.iohk.ethereum.ObjectGenerators
 import io.iohk.ethereum.domain.Block._
 import io.iohk.ethereum.domain._
-import io.iohk.ethereum.network.p2p.messages.CommonMessages.SignedTransactions._
+import io.iohk.ethereum.network.p2p.messages.PV60.SignedTransactions._
 import io.iohk.ethereum.utils.Logger
 import org.scalacheck.Gen
 import org.bouncycastle.util.encoders.Hex

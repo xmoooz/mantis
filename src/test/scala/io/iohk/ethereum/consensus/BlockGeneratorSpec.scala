@@ -220,6 +220,7 @@ class BlockGeneratorSpec extends AnyFlatSpec with Matchers with ScalaCheckProper
       monetaryPolicyConfig =
         MonetaryPolicyConfig(5000000, 0.2, 5000000000000000000L, 3000000000000000000L, 2000000000000000000L),
       // unused
+      protocolVersion = 63,
       maxCodeSize = None,
       eip160BlockNumber = Long.MaxValue,
       eip150BlockNumber = Long.MaxValue,
@@ -292,6 +293,7 @@ class BlockGeneratorSpec extends AnyFlatSpec with Matchers with ScalaCheckProper
       monetaryPolicyConfig =
         MonetaryPolicyConfig(5000000, 0.2, 5000000000000000000L, 3000000000000000000L, 2000000000000000000L),
       // unused
+      protocolVersion = 63,
       maxCodeSize = None,
       eip160BlockNumber = Long.MaxValue,
       eip150BlockNumber = Long.MaxValue,
@@ -571,6 +573,7 @@ class BlockGeneratorSpec extends AnyFlatSpec with Matchers with ScalaCheckProper
       monetaryPolicyConfig =
         MonetaryPolicyConfig(5000000, 0.2, 5000000000000000000L, 3000000000000000000L, 2000000000000000000L),
       // unused
+      protocolVersion = 63,
       maxCodeSize = None,
       eip160BlockNumber = Long.MaxValue,
       eip150BlockNumber = Long.MaxValue,
