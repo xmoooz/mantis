@@ -58,19 +58,11 @@ class TimeSlotStats[K, V: Monoid] private (
 
   private def fold[A](init: A, window: Duration)(f: (A, Map[K, V]) => A) = {
     val (start, end) = slotRange(currentTimeMillis, window)
-
-    def loop(idx: Int, acc: A): A = {
-      val entry = buffer(idx)
-      if (entry.slotId < start || end < entry.slotId)
-        acc
-      else {
-        val nextAcc = f(acc, entry.slotStats)
-        val nextIdx = pred(idx)
-        if (nextIdx == lastIdx) nextAcc else loop(nextIdx, nextAcc)
+    buffer.values
+      .collect {
+        case entry if start <= entry.slotId && entry.slotId <= end => entry.slotStats
       }
-    }
-
-    loop(lastIdx, init)
+      .foldLeft(init)(f)
   }
 
   private def currentTimeMillis: Timestamp =
